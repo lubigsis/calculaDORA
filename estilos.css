@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(#9145B6, #F2789F);
+}
+
+.total-container{
+    margin: auto;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+
+
+.calculator-container{
+    border: 1px solid green;
+}
+
+h1{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #b13eeb;
+    letter-spacing: 2px;
+    font-size: 50px;
+    padding: 10px;
+   margin-left: 40px;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.dora-img{
+    margin-left: 100px;
+}
