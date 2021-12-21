@@ -13,15 +13,54 @@ body{
     width: 90%;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: #fff;
+    padding: 10px;
 }
-
-
 
 .calculator-container{
     border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    font-family: 'Secular One', sans-serif;
+    font-size: 50px;
+}
+
+.calculator-display{
+    width: 100%;
+    padding: 5px 15px;
+    text-align: right;
+    border: 1px solid blue;
+    overflow-x: auto; /*p/que se puedan ver todo el resultado si son muchos n°*/
+}
+
+.calculator-keypad{
+    display: flex;
+    width: 100%;
+    border: 1px solid yellow;
+    font-size: 40px;
+}
+
+.keypad-numbers{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.btn{
+    border: 1px solid purple;
+    width: 44px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    background: cornflowerblue;
+}
+
+.btn:hover{
+    filter: brightness(80%);
+    transition: filter .25s;
 }
 
 h1{
