@@ -5,50 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcula, Dora</title>
+    <!--Estilos-->
     <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <!--contenedor total de la imagen + titulo + calculadora-->
     <div class="total-container">
         <div class="img-container">
             <h1>Calcula, DORA!</h1>
             <img src="calculaDora.jpg" alt="Dora la exploradora" class="dora-img">
         </div>
-  
-        <div class="calculator-container">        
-            <div class="calculator-display">0</div>
-            <div class="calculator-keypad">
-                <div class="keypad-numbers">
-                    <div class="btn">7</div>
-                    <div class="btn">8</div>
-                    <div class="btn">9</div>
-                    <div class="btn grande color">C</div>
-                    <div class="btn">4</div>
-                    <div class="btn">5</div>
-                    <div class="btn">6</div>
-                    <div class="btn">-</div>
-                    <div class="btn">+</div>
-                    <div class="btn">1</div>
-                    <div class="btn">2</div>
-                    <div class="btn">3</div>
-                    <div class="btn">/</div>
-                    <div class="btn">*</div>
-                    <div class="btn alto">%</div>
-                    <div class="btn">.</div>
-                    <div class="btn">=</div>
-                    <div class="btn grande">0</div>
-                    
-                </div>
-            </div>
-        </div>
+
+        <!--Aca empieza la calculadora-->
+        <div class="contenedor-calculadora">
+            <form id="calculadoraJS">
+                
+                <input type="text" value="0" onclick="" class="calculadora-display">
+
+                    <div class="calculator-keypad">
+                        <div class="keypad-numbers">
+                           
+                            <div class="btn">
+                            <input type="button" class="" value="7" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="8" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="9" onclick="">
+                            </div>
+                            <div class="btn grande color">
+                            <input type="button" value="C" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="4" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="5" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="6" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="-" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="+" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="1" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="2" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="3" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="/" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="*" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="%" onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="." onclick="">
+                            </div>
+                            <div class="btn">
+                            <input type="button" value="=" onclick="">
+                            </div>
+                            <div class="btn grande">
+                            <input type="button" value="0" onclick="">
+                            </div>
+                        </div>
+                    </div>
+            </form>
    
+        </div>
     </div>
+
+
     <script src="main.js"></script>
 </body>
 </html>
