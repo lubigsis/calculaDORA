@@ -24,70 +24,70 @@
 
         <!--Aca empieza la calculadora-->
         <div class="contenedor-calculadora">
-            <form id="calculadoraJS">
+            <div id="calculadoraJS">
                 
-                <input type="text" value="0" onclick="" class="calculadora-display">
+                <input type="text" value="0" class="calculadora-display" id="displayJS">
 
                     <div class="calculator-keypad">
                         <div class="keypad-numbers">
                            
                             <div class="btn">
-                            <input type="button" class="" value="7" onclick="">
+                            <input type="button" class="" value="7" id="num7" onclick="display_numeros(7)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="8" onclick="">
+                            <input type="button" value="8" id="num8" onclick="display_numeros(8)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="9" onclick="">
+                            <input type="button" value="9" id="num9" onclick="display_numeros(9)">
                             </div>
                             <div class="btn grande color">
-                            <input type="button" value="C" onclick="">
+                            <input type="button" value="C" id="valorC">
                             </div>
                             <div class="btn">
-                            <input type="button" value="4" onclick="">
+                            <input type="button" value="4" id="num4" onclick="display_numeros(4)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="5" onclick="">
+                            <input type="button" value="5" id="num5" onclick="display_numeros(5)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="6" onclick="">
+                            <input type="button" value="6" id="num6" onclick="display_numeros(6)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="-" onclick="">
+                            <input type="button" value="-" id="valorRestar">
                             </div>
                             <div class="btn">
-                            <input type="button" value="+" onclick="">
+                            <input type="button" value="+" id="valorSumar">
                             </div>
                             <div class="btn">
-                            <input type="button" value="1" onclick="">
+                            <input type="button" value="1" id="num1" onclick="display_numeros(1)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="2" onclick="">
+                            <input type="button" value="2" id="num2" onclick="display_numeros(2)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="3" onclick="">
+                            <input type="button" value="3" id="num3" onclick="display_numeros(3)">
                             </div>
                             <div class="btn">
-                            <input type="button" value="/" onclick="">
+                            <input type="button" value="/" id="valorDividir">
                             </div>
                             <div class="btn">
-                            <input type="button" value="*" onclick="">
+                            <input type="button" value="*" id="valorMultiplicar">
                             </div>
                             <div class="btn">
-                            <input type="button" value="%" onclick="">
+                            <input type="button" value="%" id="valorPorcentaje">
                             </div>
                             <div class="btn">
-                            <input type="button" value="." onclick="">
+                            <input type="button" value="." id="valorPunto">
                             </div>
                             <div class="btn">
-                            <input type="button" value="=" onclick="">
+                            <input type="button" value="=" id="valorIgual">
                             </div>
                             <div class="btn grande">
-                            <input type="button" value="0" onclick="">
+                            <input type="button" value="0" id="valorCero" onclick="display_numeros(0)">
                             </div>
                         </div>
                     </div>
-            </form>
+            </div>
    
         </div>
     </div>
