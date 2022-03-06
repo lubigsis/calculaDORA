@@ -3,7 +3,9 @@
 
 let cifra= "";
 let acumulado= 0;
-
+let primeraOperacion= true;
+let sumar= false;
+let restar= false;
 
 function display_numeros(numero){
 
@@ -14,13 +16,62 @@ function display_numeros(numero){
 /**para que vaya apareciendo de a una vez los numeros al presionar el boton de sumar. La variable cifra lo va acumulando */
 
  //primero almaceno y luego reseteo la variable cifra
-function sumar (){    
-    acumulado= acumulado + parseInt(cifra);
-    document.getElementById("displayJS").value= acumulado;
-    cifra="";
+
+function suma(){  
     
+    if (restar){
+        acumulado= acumulado - parseInt(cifra);
+        document.getElementById("displayJS").value= acumulado;
+    }else{
+        acumulado= acumulado + parseInt(cifra);
+        document.getElementById("displayJS").value= acumulado;
+}
+    cifra="";
+    sumar=true;
+    restar= false;
 }
 
+/**funcion resta; si lo ultimo que hiciste fue una resta, sumale a acumulado lo que hay en el display */
+
+function resta(){
+
+    if(primeraOperacion==false){
+
+    if (sumar){
+        acumulado=acumulado + parseInt(cifra);
+        document.getElementById("displayJS").value= acumulado;
+
+    }else{
+        acumulado = acumulado - parseInt(cifra);
+        document.getElementById("displayJS").value= acumulado;
+    }
+}else{
+    acumulado= parseInt(cifra);
+    primeraOperacion= false;
+}
+        cifra="";
+        sumar= false;
+        restar= true;
+    }
+
+/**detectar que operaciones se quiere realizar mediante el if.  */
+//si sumar es true => if (sumar) es igual a: if (sumar==true)
+//luego de hacer la operacion correspondiente, en acumulado almaceno lo que hay en el display.
+//tmb reseteo cifra con 0 asi el nro que aparece en pantalla no interfiere con el cambio de operacion
+
+function resultado(){
+    if (sumar){
+
+        document.getElementById("displayJS").value= acumulado + parseInt(cifra);
+
+    }else if(restar){
+
+        document.getElementById("displayJS").value= acumulado - parseInt(cifra);
+    }
+
+    acumulado= parseInt(document.getElementById("displayJS").value);
+    cifra= 0;
+}
 
 
 
