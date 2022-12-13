@@ -21,46 +21,66 @@
 }
 
 /*------------------------------------------------------------------------------------412px-------------------*/
-
-@media screen and (max-width: 412px){
-
-    h1{        
-        letter-spacing: 2px;
-        font-size: 20px;
-        
-        
-    }
-
-    .total-container{
-        width: 100%;
+@media screen and (max-height: 734px) and (orientation : landscape) 
+and (-webkit-device-pixel-ratio: 2){
+    
+    .contenedor-total-calculadora{
         height: auto;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
+        margin-top: 6%;
         
     }
 
-    .total-container .img-container{
-        width: 200px;
-        height: 300px;
-        margin: auto;
-    }
+    
+    
 
-    .total-container .contenedor-total-calculadora{
-        width: 320px;
-        height: auto;
-        margin: auto;
-       
-    }
-
-    .contenedor-calculadora{
-        border: 8px solid #F2789F;
-        width: 100%;
-        border-radius: 12px;
-        
     }
     
+    @media screen and (max-width: 412px) and (orientation : portrait) 
+    and (-webkit-device-pixel-ratio: 2){
+
+        h1{        
+            letter-spacing: 2px;
+            font-size: 20px;
+            
+            
+        }
+    
+        .total-container{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            
+        }
+    
+        .total-container .img-container{
+            width: 200px;
+            height: 300px;
+            margin: auto;
+        }
+    
+        .total-container .contenedor-total-calculadora{
+            width: 320px;
+            height: auto;
+            margin: auto;
+           
+        }
+    
+        .contenedor-calculadora{
+            border: 8px solid #F2789F;
+            width: 100%;
+            border-radius: 12px;
+            
+        }
+    }
+
+/*---------------------------------------------------------------landscape------------------------------------*/
+
+@media screen and (max-height: 734px) and (orientation : landscape){
 
 
 
 }
+
+
