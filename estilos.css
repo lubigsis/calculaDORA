@@ -27,14 +27,15 @@ h1{
     margin: auto;
     width: 98%;
     max-width: 1200px;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background: #fff;
     /*border: 2px solid blue;*/
     border-radius: 15px;
-    overflow: hidden;
+   /* overflow: hidden;*/
+    padding: 20px;
 }
 
 
@@ -43,10 +44,11 @@ h1{
     width: 25%;
     height: 100vh;
    /* border: 2px solid yellow;*/
+    margin-top: 5%;
     
     background-image: url(calculaDora.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: contain;
 }
 
@@ -55,20 +57,22 @@ h1{
 /*-----------------------------------------------------------------------------Calculadora------------------------*/
 
 .contenedor-total-calculadora{
-    /*border: 4px solid rgb(2, 241, 26);*/
+   /* border: 4px solid rgb(2, 241, 26);*/
     width: 50%;
     height: 100vh;
-    min-width: 310px;
+    min-width: 350px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+  
 }
 
 .contenedor-calculadora{
+    width: 100%;
     border: 15px solid #F2789F;
     display: flex;
-    flex-direction: column;
-    width: 400px;
+    /*flex-direction: column;*/
+    /*width: 400px;*/
     font-family: 'Secular One', sans-serif;
     border-radius: 15px;
     background-color: #F2789F;

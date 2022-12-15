@@ -1,86 +1,122 @@
 
+/*------------------------------------------------------------------------------------992px-------------------*/
 
-/*------------------------------------------------------------------------------------576px-------------------*/
-@media screen and (max-width: 576px){
-    .total-container{
-        width: 100%;
-        border-radius: 1px;
-        
-    }
-    
-    h1{        
-        letter-spacing: 3px;
-        font-size: 35px;
-                
-    }
+@media screen and (max-width: 992px){
+    .img-container{
+        margin-top: 10%;
+}
 
-    .contenedor-total-calculadora{
-        width: 60%;
-        }
 
 }
 
-/*------------------------------------------------------------------------------------412px-------------------*/
-@media screen and (max-height: 734px) and (orientation : landscape) 
-and (-webkit-device-pixel-ratio: 2){
+/*-----------------------------------------------------------------------------------768px----------------------*/
+
+@media screen and (max-width: 768px){
+    .img-container{
+        margin-top: 15%;
+ }
+}
+
+
+/*----------------------------------------------------------------------------------678px----------------------*/
+
+@media screen and (max-width: 678px){
+.total-container{
+    width: 100%;
+    padding: 5px;
+}
+
+
+.img-container{
+    width: 30%;
+    margin-top: 25%;
     
+}
+
+
+.contenedor-total-calculadora{
+    width: 40%;
+    margin-top: 5%;
+   
+}
+
+}
+
+
+/*------------------------------------------------------------------------------------585px-------------------*/
+ @media screen and (max-width: 585px){
+
+    h1{        
+        letter-spacing: 2px;
+      
+        
+        
+    }
+    
+    .total-container{
+        padding: 1px;
+    }
+
+
+    .img-container{
+        width: 60%;
+        margin-top: 1%;
+        height: 300px;
+        
+    }
+
+    .contenedor-total-calculadora{
+        width: 80%;
+        margin-top: 3%;
+        
+    }
+}
+
+
+/*---------------------------------------------------------------------------------375px---------------------------*/
+
+@media screen and (max-width: 375px){
+
+    h1{        
+        font-size: 20px;
+      
+           
+    }
+    
+    .total-container{
+        padding: 0px;
+    }
+
+
+    .img-container{
+        height: 200px;
+        
+    }
+
+    .contenedor-total-calculadora{
+        margin-top: 5%;
+        
+    }
+
+    
+}
+
+/*--------------------------------------------------orientation: LANDSCAPE------------------------------------*/
+
+/*------------------------------------------------------------------------------------734px----------------------*/
+
+@media screen and (max-height: 734px) and (orientation: landscape){
+
+    .img-container{
+        width: 30%;
+        
+       
+    }
+
     .contenedor-total-calculadora{
         height: auto;
-        margin-top: 6%;
-        
+     
+      
     }
-
-    
-    
-
-    }
-    
-    @media screen and (max-width: 412px) and (orientation : portrait) 
-    and (-webkit-device-pixel-ratio: 2){
-
-        h1{        
-            letter-spacing: 2px;
-            font-size: 20px;
-            
-            
-        }
-    
-        .total-container{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-            
-        }
-    
-        .total-container .img-container{
-            width: 200px;
-            height: 300px;
-            margin: auto;
-        }
-    
-        .total-container .contenedor-total-calculadora{
-            width: 320px;
-            height: auto;
-            margin: auto;
-           
-        }
-    
-        .contenedor-calculadora{
-            border: 8px solid #F2789F;
-            width: 100%;
-            border-radius: 12px;
-            
-        }
-    }
-
-/*---------------------------------------------------------------landscape------------------------------------*/
-
-@media screen and (max-height: 734px) and (orientation : landscape){
-
-
 
 }
-
-
