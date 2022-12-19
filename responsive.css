@@ -1,9 +1,18 @@
 
+
+
 /*------------------------------------------------------------------------------------992px-------------------*/
 
 @media screen and (max-width: 992px){
+
+    .total-container{
+        height: auto;
+        padding: 15px;
+    }
+
     .img-container{
         margin-top: 10%;
+        height: 500px;
 }
 
 
@@ -23,13 +32,14 @@
 @media screen and (max-width: 678px){
 .total-container{
     width: 100%;
-    padding: 5px;
+    padding: 4px;
 }
 
 
 .img-container{
-    width: 30%;
-    margin-top: 25%;
+    width: 40%;
+    height: 400px;
+    margin-top: 15px;
     
 }
 
@@ -55,12 +65,13 @@
     
     .total-container{
         padding: 1px;
+        border-radius: 5px;
     }
 
 
     .img-container{
         width: 60%;
-        margin-top: 1%;
+        margin-top: 10px;
         height: 300px;
         
     }
@@ -68,6 +79,7 @@
     .contenedor-total-calculadora{
         width: 80%;
         margin-top: 3%;
+        padding: 3px;
         
     }
 }
@@ -103,20 +115,34 @@
 
 /*--------------------------------------------------orientation: LANDSCAPE------------------------------------*/
 
-/*------------------------------------------------------------------------------------734px----------------------*/
+/*------------------------------------------------------------------------------------1080px----------------------*/
+@media screen and (max-height: 1080px) and (orientation: landscape){
 
-@media screen and (max-height: 734px) and (orientation: landscape){
+    .total-container{
+        height: auto;
+        padding: 35px;
+    }
 
     .img-container{
         width: 30%;
-        
+        height: 400px;
        
     }
+    
 
-    .contenedor-total-calculadora{
-        height: auto;
-     
-      
+
+}
+
+/*------------------------------------------------------------------------------------734px----------------------*/
+
+@media screen and (max-height: 734px) and (orientation: landscape){
+ 
+
+    .img-container{
+        width: 30%;
+       
+       
     }
+    
 
 }
