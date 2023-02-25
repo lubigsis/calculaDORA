@@ -116,7 +116,8 @@ h1{
 .btn{
     border: 5px solid #f14b77;
     width: 20%;
-    padding: 5px;
+    padding: 10px;
+    font-size: 25px;
     text-align: center;
     cursor: pointer;
     background: #F9C5D5;
@@ -127,14 +128,14 @@ h1{
     filter: brightness(80%);
     transition: filter .25s;
 }
-
+/*
 input{
     background: none;
     border: 0;
     font-size: 55px;
     cursor: pointer;
 }
-
+*/
 .grande{
     width: 40%;
 }
