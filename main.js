@@ -1,15 +1,15 @@
-
 window.addEventListener('load', () => { //p/escuchar q' se carga el documento HTMl.
     //-------------referencio variables p/buscar el display y los botones (se guardan en un HTML collection y dsp lo convierto a array).
-    let display = document.getElementById('displayJS');
     let keypadButtons = document.getElementsByClassName('btn');
+    let display = document.querySelector('.calculadora-display');
+ 
 //-----------acá creo otra variable p/convertir el HTMLCollection a Array
     let keypadButtonsArray = Array.from(keypadButtons);
 
     //----Ahora sí puedo iterar en este nuevo Array creado
     keypadButtonsArray.forEach( (button) =>{
         //---a cada boton se le agrega un listener con el forEach para escuchar cuando el user hace click y lo imprime.
-        button.addEventListener('click', ()=>{
+        button.addEventListener('click', () => {
 
             calculadora(button, display);//se le pasa el btn q' se presionó y el display
         })
@@ -48,6 +48,8 @@ function actualizar(display, button){
     
 }
 
-function borrar(display){
-    display.innerHTML = 0;
+function borrar(display) {
+    if(display.innerHTML != 0) {
+        display.innerHTML = 0;
+    }
 }

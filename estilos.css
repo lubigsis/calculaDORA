@@ -1,4 +1,4 @@
-/*Estilos generales*/
+/*Estilos generales*/   /*ver diseño calculadora cuando se escriben muchos números en el display*/
 
 *{
     margin: 0;
@@ -9,7 +9,7 @@
 body{
     /*background-image: linear-gradient(#e56809, #ec2a67);*/
     background-color: #e56809;
-background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23c4f309' fill-opacity='0.12' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23c4f309' fill-opacity='0.12' fill-rule='evenodd'/%3E%3C/svg%3E");
    /* margin: auto;*/
 }
 
@@ -61,9 +61,10 @@ h1{
 
 .contenedor-total-calculadora{
    /* border: 4px solid rgb(2, 241, 26);*/
-    width: 45%;
+    width: 40%;
     height: auto;
     min-width: 350px;
+  /*  max-width: 500px;*/
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -82,6 +83,8 @@ h1{
     background-color: #F2789F;
     border-top: 30px solid #F2789F;
     box-shadow: 6px 12px 27px rgba(10, 10, 10, 0.7);
+/*border: 2px solid blue;*/
+ /*   max-width: 500px;*/
 }
 
 .calculadora-display{
@@ -94,7 +97,8 @@ h1{
     background-color: #191A19;
     color: #06FF00;
     font-size: 60px;
-    
+    letter-spacing: 2px;
+    max-width: 450px;
 }
 
 
@@ -122,20 +126,14 @@ h1{
     cursor: pointer;
     background: #F9C5D5;
     border-radius: 4px;
+    
 }
 
 .btn:hover{
     filter: brightness(80%);
     transition: filter .25s;
 }
-/*
-input{
-    background: none;
-    border: 0;
-    font-size: 55px;
-    cursor: pointer;
-}
-*/
+
 .grande{
     width: 40%;
 }
