@@ -1,81 +1,55 @@
-/*funcion generica que recibe el valor del boton que se clickea, y se muestra en el display xq cada boton le pasa por parametro en el HTML el numero correspondiente */
-/*cifra, q en principio es una cadena vacia, va adquieriendo los valores q se clickean, y los va concatenendo con los otros nros que se aprietany mostrando en el display*/
+window.addEventListener('load', () => { //p/escuchar q' se carga el documento HTMl.
+    //-------------referencio variables p/buscar el display y los botones (se guardan en un HTML collection y dsp lo convierto a array).
+    let keypadButtons = document.getElementsByClassName('btn');
+    let display = document.querySelector('.calculadora-display');
+ 
+//-----------acá creo otra variable p/convertir el HTMLCollection a Array
+    let keypadButtonsArray = Array.from(keypadButtons);
 
-let cifra= "";
-let acumulado= 0;
-let primeraOperacion= true;
-let sumar= false;
-let restar= false;
+    //----Ahora sí puedo iterar en este nuevo Array creado
+    keypadButtonsArray.forEach( (button) =>{
+        //---a cada boton se le agrega un listener con el forEach para escuchar cuando el user hace click y lo imprime.
+        button.addEventListener('click', () => {
 
-function display_numeros(numero){
+            calculadora(button, display);//se le pasa el btn q' se presionó y el display
+        })
+    })
+});
 
-    document.getElementById("displayJS").value= cifra + numero;
-    cifra= document.getElementById("displayJS").value;
+/*---------------------------------------------------FUNCIONES------------------------------------------------------*/
+//dependiendo del btn q' se presione, se va a tomar una acción predetermidada.
+function calculadora(button, display){
+    switch (button.innerHTML){
+        case 'C':
+            borrar(display);
+            break;
+        case '=':
+            calcular(display);
+            break;
+        default:
+            actualizar(display, button);
+            break;
+    }
 }
 
-/**para que vaya apareciendo de a una vez los numeros al presionar el boton de sumar. La variable cifra lo va acumulando */
+//la palabra reservada 'eval' toma el string de la operación (lo q' marcamos en el display) y lo resuelve
+function calcular(display){
+    display.innerHTML = eval(display.innerHTML); //cambia el contenido del display por la resolución
+}
 
- //primero almaceno y luego reseteo la variable cifra
+//función q' borra el cero inicial (si existe) y le agrega al innerHTML del display, el innerHTML del btn q´el user apretó
+function actualizar(display, button){
+    if (display.innerHTML == 0){
+        display.innerHTML = '';
+    }
+//lo de abajo pone cada n° q' se apriete uno al lado del otro
+        display.innerHTML += button.innerHTML;
 
-function suma(){  
     
-    if (restar){
-        acumulado= acumulado - parseInt(cifra);
-        document.getElementById("displayJS").value= acumulado;
-    }else{
-        acumulado= acumulado + parseInt(cifra);
-        document.getElementById("displayJS").value= acumulado;
-}
-    cifra="";
-    sumar=true;
-    restar= false;
 }
 
-/**funcion resta; si lo ultimo que hiciste fue una resta, sumale a acumulado lo que hay en el display */
-
-function resta(){
-
-    if(primeraOperacion==false){
-
-    if (sumar){
-        acumulado=acumulado + parseInt(cifra);
-        document.getElementById("displayJS").value= acumulado;
-
-    }else{
-        acumulado = acumulado - parseInt(cifra);
-        document.getElementById("displayJS").value= acumulado;
+function borrar(display) {
+    if(display.innerHTML != 0) {
+        display.innerHTML = 0;
     }
-}else{
-    acumulado= parseInt(cifra);
-    primeraOperacion= false;
 }
-        cifra="";
-        sumar= false;
-        restar= true;
-    }
-
-/**detectar que operaciones se quiere realizar mediante el if.  */
-//si sumar es true => if (sumar) es igual a: if (sumar==true)
-//luego de hacer la operacion correspondiente, en acumulado almaceno lo que hay en el display.
-//tmb reseteo cifra con 0 asi el nro que aparece en pantalla no interfiere con el cambio de operacion
-
-function resultado(){
-    if (sumar){
-
-        document.getElementById("displayJS").value= acumulado + parseInt(cifra);
-
-    }else if(restar){
-
-        document.getElementById("displayJS").value= acumulado - parseInt(cifra);
-    }
-
-    acumulado= parseInt(document.getElementById("displayJS").value);
-    cifra= 0;
-}
-
-
-
-
-
-/**dejar el siguiente codigo al final para que el display se sobreescriba con 0 cada vez que se actualice la pagina*/
-document.getElementById("displayJS").value=0;
